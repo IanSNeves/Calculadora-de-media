@@ -51,7 +51,7 @@ alert ("Por favor, preencha os campos corretamente!")
 
 // Funcao para calculo da media final
     function calculoDeMedia(){
-        if (notasRegistradas.length === 0) return 0;
+        if (notasRegistradas.length === 0) return 0;    
         const somaDasNotas = notasRegistradas.reduce((total, nota) => total + nota, 0);
         return somaDasNotas / notasRegistradas.length; 
     }
@@ -60,7 +60,7 @@ alert ("Por favor, preencha os campos corretamente!")
         const mediaFinal = calculoDeMedia();
         console.log(mediaFinal);
 
-        document.querySelector("#resultado-media").innerHTML = mediaFinal;
+        document.querySelector("#resultado-media").innerHTML = mediaFinal.toFixed(2);
         document.querySelector("#situacao-aluno").innerHTML = mediaFinal >= notaMinima ? alunoAprovado : alunoReprovado;
     }
 
